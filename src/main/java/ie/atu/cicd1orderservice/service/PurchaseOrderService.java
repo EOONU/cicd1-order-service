@@ -5,7 +5,7 @@ import ie.atu.cicd1orderservice.client.CatalogClient;
 import ie.atu.cicd1orderservice.model.PurchaseOrder;
 import ie.atu.cicd1orderservice.repository.PurchaseOrderRepository;
 import org.springframework.stereotype.Service;
-
+import ie.atu.cicd1orderservice.client.dto.ProductResponse;
 import java.util.List;
 
 @Service
@@ -32,7 +32,7 @@ public class PurchaseOrderService {
     }
 
     // Temporary OpenFeign test
-    public String testCatalogConnection(Long productId) {
+    public ProductResponse testCatalogConnection(Long productId) {
         return catalogClient.getProductById(productId);
     }
 }

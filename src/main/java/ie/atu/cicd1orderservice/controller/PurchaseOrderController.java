@@ -5,7 +5,7 @@ import ie.atu.cicd1orderservice.model.PurchaseOrder;
 import ie.atu.cicd1orderservice.service.PurchaseOrderService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
+import ie.atu.cicd1orderservice.client.dto.ProductResponse;
 import java.util.List;
 
 @RestController
@@ -32,7 +32,7 @@ public class PurchaseOrderController {
 
     // Temporary integration test
     @GetMapping("/test-catalog/{productId}")
-    public String testCatalogConnection(
+    public ProductResponse testCatalogConnection(
             @PathVariable Long productId) {
 
         return purchaseOrderService
